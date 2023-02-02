@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Jenkins and Nexus Integration automation testing</h2>
+<h2>Jenkins and slack integaration and notifications configuration</h2>
 </body>
 </html>
