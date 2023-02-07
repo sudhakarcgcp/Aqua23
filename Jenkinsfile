@@ -49,7 +49,7 @@ pipeline {
     stage ('Slack Notification Activation') {
       steps {
         echo "deployed to DEV Slack Notification enablement"
-        slackSend channel: 'devops-dev-channel', tokenCredentialId: '681f3f4e-befb-4dc2-a0df-9d1310d63ab7'
+        slackSend teamDomain: 'sudhakarheadquarters', tokenCredentialId: '681f3f4e-befb-4dc2-a0df-9d1310d63ab7'
       }
     }
     stage ('Slack Notification') {
