@@ -46,6 +46,12 @@ pipeline {
       deploy adapters: [tomcat9(credentialsId: 'bf0db40e-79c5-45b9-8f91-0af4abb5936b', path: '', url: 'http://ec2-18-134-5-156.eu-west-2.compute.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
       }
     }
+    stage ('Slack Notification Activation') {
+      steps {
+        echo "deployed to DEV Slack Notification enablement"
+        slackSend channel: 'devops-dev-channel', tokenCredentialId: '681f3f4e-befb-4dc2-a0df-9d1310d63ab7'
+      }
+    }
     stage ('Slack Notification') {
       steps {
         echo "deployed to DEV Env successfully"
